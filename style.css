@@ -1,0 +1,490 @@
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds*/
+
+body {
+    background-image: url(https://mdn.mozillademos.org/files/11307/bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-left: 20px;
+    margin-left: -2px;
+}
+
+.container {
+    text-align: center;
+    font-size: x-large;
+    text-shadow: white;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.fade-in {
+    animation: fadeIn ease 15s;
+    -webkit-animation: fadeIn ease 15s;
+    -moz-animation: fadeIn ease 15s;
+    -o-animation: fadeIn ease 15s;
+    -ms-animation: fadeIn ease 15s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.month {
+    margin-top: -16px;
+    padding: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+#monthName {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 20px;
+}
+
+#year {
+    font-size: 55px;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.prev {
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: rgb(5, 0, 36);
+    background: linear-gradient( 324deg, rgba(5, 0, 36, 0) 23%, rgb(35, 111, 241) 100%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
+    float: left;
+    padding-top: 10px;
+    font-size: 35px;
+    margin-top: 30px;
+}
+
+.prev:hover {
+    background: rgb(5, 0, 36);
+    background: linear-gradient( 324deg, rgba(5, 0, 36, 0) 23%, rgb(126, 147, 180) 94%);
+}
+
+.prev:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.next {
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: rgb(5, 0, 36);
+    background: linear-gradient( 324deg, rgba(5, 0, 36, 0) 23%, rgb(35, 111, 241) 100%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
+    float: right;
+    padding-top: 10px;
+    font-size: 35px;
+    margin-top: 30px;
+}
+
+.next:hover {
+    background: rgb(5, 0, 36);
+    background: linear-gradient( 324deg, rgba(5, 0, 36, 0) 23%, rgb(126, 147, 180) 94%);
+}
+
+.next:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12.6%;
+    text-align: center;
+    margin-left: 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    background: rgb(5, 0, 36);
+    background: linear-gradient( 324deg, rgba(5, 0, 36, 0) 23%, rgb(126, 147, 180) 94%);
+    font-family: monospace;
+}
+
+.button {
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s;
+    font-size: 35px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 23px;
+    font-family: monospace;
+    border-radius: 4px;
+    background: rgb(5, 0, 36);
+    background: linear-gradient( 324deg, rgba(5, 0, 36, 0) 23%, rgb(35, 111, 241) 100%);
+    padding-right: 10px;
+    width: 235px;
+    height: 110px;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: #ffffff
+}
+
+.button:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover {
+    padding-left: 15px;
+    font-size: 50px;
+    background: rgb(5, 0, 36);
+    background: linear-gradient( 324deg, rgba(5, 0, 36, 0) 23%, rgb(126, 147, 180) 94%);
+}
+
+.button:hover :after {
+    opacity: 1;
+    right: 0;
+}
+
+.prev-date,
+.next-date {
+    opacity: 0.6;
+    background-color: white;
+    font-style: bold;
+}
+
+.prev-date:hover,
+.next-date:hover {
+    opacity: 2;
+}
+
+.taskCount-badge {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    h3 {
+        height: 10%;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    p {
+        height: 10%;
+        font-size: 15px;
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    #monthName,
+    #year {
+        font-size: 20px;
+        margin: 100x;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    /* For mobile phones: */
+    #monthName,
+    #year {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width:2000px) {
+    /* For desktops: */
+    .button,
+    .weekdays li {
+        width: 12%;
+        height: 50%;
+        margin-right: 5px;
+        margin-left: 20px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:1500px) {
+    /* laptops: */
+    .button,
+    .weekdays li {
+        width: 13%;
+        height: auto;
+        margin-right: 1px;
+        margin-left: 10px;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    /* For landscape ipad: */
+    .button {
+        width: 11%;
+        height: 20%;
+        margin-right: 1px;
+        margin-left: 3px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    /* For landscape ipad: */
+    .weekdays li,
+    .prev,
+    .next {
+        width: 12%;
+        height: 10%;
+        margin-right: 1px;
+        margin-left: 15px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    /* For portrati ipad: */
+    .button {
+        margin-left: 16.3px;
+        margin-right: 0.5px;
+        width: 12.8%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    /* For portrait ipad: */
+    .weekdays li,
+    .prev,
+    .next {
+        width: 12%;
+        height: 10%;
+        margin-right: 1px;
+        margin-left: 5px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .prev,
+    .next {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .button:hover {
+        width: 12%;
+        height: 10%;
+        font-size: 20px;
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .button {
+        width: 12%;
+        height: 10%;
+        margin-left: 7px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .weekdays li {
+        width: 12%;
+        height: 10%;
+        margin-right: 2px;
+        margin-left: 3px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 10px;
+        text-align: center;
+        font-family: monospace;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    /* For mobile phones: */
+    .weekdays li {
+        width: 11.5%;
+        height: 10%;
+        font-size: 8.5px;
+        font: bolder;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    /* For mobile phones: */
+    .button {
+        width: 12%;
+        height: 10%;
+        margin-left: 6px;
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:2000px) {
+    /* For desktops: */
+    .prev-date,
+    .next-date {
+        opacity: 0.4%;
+    }
+}
+
+@media only screen and (max-width:1500px) {
+    /* For labtops: */
+    .prev-date,
+    .next-date {
+        opacity: 0.4%;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    /* For labtops: */
+    .prev-date,
+    .next-date {
+        opacity: 0.4%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    /* For landscape ipad: */
+    .prev-date,
+    .next-date {
+        opacity: 0.4%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    /* For portrait ipad: */
+    .prev-date,
+    .next-date {
+        opacity: 0.4%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .prev-date,
+    .next-date {
+        opacity: 0.4%;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    /* For mobile phones: */
+    .prev-date,
+    .next-date {
+        opacity: 0.4%;
+    }
+}
+
+@media only screen and (min-width:500px) {
+    .fade-in {
+        font-size: 5px;
+        text-align: center;
+    }
+}
